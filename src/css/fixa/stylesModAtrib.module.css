@@ -1,0 +1,48 @@
+.all {
+    display: flex;
+}
+
+.modAtrib {
+    background-color: #dedfdf;
+    padding-top: 20px;
+    width: 95px;
+    height: 650px;
+    background-image: url("../../../public/FundoModAtrib.png");
+
+}
+
+.block {
+    padding-top: 10px;
+    margin-top: 8px;
+    margin-left: 9px;
+    text-align: center;
+    background-color: white;
+    background-image: url("../../../public/FundoAtrib.png");
+    width: 80px;
+    height: 87px;
+}
+
+.block_Text {
+    margin: 0px;
+    margin-top: 0px;
+    padding: 0px;
+    font-size: 8px;
+    font-weight: bolder;
+}
+
+.block_Input {
+    margin-top: 10px;
+    padding: 0px;
+    text-align: center;
+    font-size: 20px;
+    width: 35px;
+}
+
+.block_Mod {
+    margin-top: 3px;
+    margin-left: 28px;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 24px;
+    width: 10px;
+}

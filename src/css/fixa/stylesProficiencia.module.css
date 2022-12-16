@@ -1,0 +1,87 @@
+.block {
+    background-image: url("../../../public/FundoInspiracao.png");
+    height: 104px;
+    width: 169px;
+}
+
+.block_Inspiracao {
+    
+    display: flex;
+    width: 169px;
+    height: 48px;
+}
+
+.block_Input_Inspiracao {
+    margin-top: 7px;
+    margin-left: 7px;
+    width: 30px;
+    height: 30px;
+}
+
+.block_Text_Inspiracao {
+    margin-top: 12px;
+    margin-left: 10px;
+    font-size: large;
+}
+
+.block_Proficiencia {
+    
+    display: flex;
+    width: 169px;
+    height: 52px;
+}
+
+.block_Input_Proficiencia {
+    margin-top: 17px;
+    margin-left: 10px;
+    padding-left: 1px;
+    width: 22px;
+    height: 22px;
+}
+
+.block_Text_Proficiencia {
+    font-size: small;
+    margin-top: 15px;
+    margin-left: 2px;
+    text-align: center;
+}
+
+.block_TestResist {
+    height: 152px;
+    width: 173px;
+    padding-top: 5px;
+    background-image: url("../../../public/FundoTestResist.png");
+    
+}
+
+.block_TestResist_Atributo {
+    display: flex;
+    margin-left: 10px;
+    padding: 0px;
+    height: 20px;
+}
+
+.block_TestResist_Atributo_Input {
+    height: 10px;
+    margin-top: 11px;
+    margin-left: 8px;
+}
+
+.block_TestResist_Text {
+    font-size: 10px;
+    margin-left: 20px;
+
+}
+
+.block_TestResist_Value{
+    margin-left: 5px;
+    font-size: 10px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.Titulo{
+    font-size: 10px;
+    margin-left: 25px; 
+    font-weight: bold;
+}

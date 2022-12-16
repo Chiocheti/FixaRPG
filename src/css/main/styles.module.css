@@ -1,0 +1,14 @@
+body{
+    background-color: white;
+}
+
+.head{
+    background-color: red;
+    height: 140px;
+    width: 782px;
+    align-items: center;
+    background-image: url("../../../public/FundoHead.png");
+}
+.flex{
+    display: flex;
+}
