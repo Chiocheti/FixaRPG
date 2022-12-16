@@ -4,6 +4,7 @@ import Proficiencia from './Proficiencia.js'
 import Style from '../../css/fixa/stylesModAtrib.module.css'
 
 function ModAtrib() {
+    ///// Teste
     var [modForca, setModForca] = useState(() => -5);
     var [modDestreza, setModDestreza] = useState(() => -5);
     var [modConstituicao, setModConstituicao] = useState(() => -5);
