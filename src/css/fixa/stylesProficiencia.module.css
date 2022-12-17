@@ -5,7 +5,7 @@
 }
 
 .block_Inspiracao {
-    
+
     display: flex;
     width: 169px;
     height: 48px;
@@ -25,7 +25,7 @@
 }
 
 .block_Proficiencia {
-    
+
     display: flex;
     width: 169px;
     height: 52px;
@@ -51,7 +51,7 @@
     width: 173px;
     padding-top: 5px;
     background-image: url("../../../public/FundoTestResist.png");
-    
+
 }
 
 .block_TestResist_Atributo {
@@ -73,15 +73,65 @@
 
 }
 
-.block_TestResist_Value{
+.block_TestResist_Value {
     margin-left: 5px;
     font-size: 10px;
     text-decoration: underline;
     font-weight: bold;
 }
 
-.Titulo{
+.Titulo {
     font-size: 10px;
-    margin-left: 25px; 
+    margin-left: 25px;
     font-weight: bold;
+}
+
+.block_Pericia {
+    margin: 0px;
+    padding-top: 15px;
+    background-image: url("../../../public/FundoPericias.png");
+    height: 385px;
+    width: 173px;
+}
+
+.block_Pericia_Atributo {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    height: 20px;
+}
+
+.block_Pericia_Atributo_Input {
+    margin: 0px;
+    margin-left: 20px;
+    padding: 0px;
+    height: 10px;
+    width: 10px;
+}
+
+.block_Pericia_Value {
+    margin: 0px;
+    margin-left: 5px;
+    padding: 0px;
+    font-size: 10px;
+}
+
+.block_Pericia_Text {
+    margin: 0px;
+    margin-left: 10px;
+    padding: 0px;
+    font-size: 10px;
+}
+
+.block_Pericia_Text_Frente {
+    margin: 0px;
+    margin-left: 6px;
+    padding: 0px;
+    font-size: 10px;
+}
+
+.Titulo_Pericia{
+    margin: 0px;
+    margin-left: 50px;
+    padding: 0px;
 }
