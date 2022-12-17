@@ -2,38 +2,35 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Style from "../../css/fixa/stylesProficiencia.module.css"
 
-function Proficiencia({ props }) {
+function Proficiencia({ modificadores, handleResult }) {
 
-    var [resistForca, setResistForca] = useState(() => props.Forca);
-    var [resistDestreza, setResistDestreza] = useState(() => props.Destreza);
-    var [resistConstituicao, setResistConstituicao] = useState(() => props.Constituicao);
-    var [resistInteligencia, setResistInteligencia] = useState(() => props.Inteligencia);
-    var [resistSabedoria, setResistSabedoria] = useState(() => props.Sabedoria);
-    var [resistCarisma, setResistCarisma] = useState(() => props.Carisma);
+    var [resistForca, setResistForca] = useState(() => modificadores.Forca);
+    var [resistDestreza, setResistDestreza] = useState(() => modificadores.Destreza);
+    var [resistConstituicao, setResistConstituicao] = useState(() => modificadores.Constituicao);
+    var [resistInteligencia, setResistInteligencia] = useState(() => modificadores.Inteligencia);
+    var [resistSabedoria, setResistSabedoria] = useState(() => modificadores.Sabedoria);
+    var [resistCarisma, setResistCarisma] = useState(() => modificadores.Carisma);
 
-    var [periciaAcrobacia, setPericiaAcrobacia] = useState(() => props.Destreza);
-    var [periciaArcanismo, setPericiaArcanismo] = useState(() => props.Inteligencia);
-    var [periciaAtletismo, setPericiaAtletismo] = useState(() => props.Forca);
-    var [periciaAtuacao, setPericiaAtuacao] = useState(() => props.Carisma);
-    var [periciaBlefar, setPericiaBlefar] = useState(() => props.Carisma);
-    var [periciaFurtividade, setPericiaFurtividade] = useState(() => props.Destreza);
-    var [periciaHistoria, setPericiaHistoria] = useState(() => props.Inteligencia);
-    var [periciaIntimidacao, setPericiaIntimidacao] = useState(() => props.Carisma);
-    var [periciaIntuicao, setPericiaIntuicao] = useState(() => props.Sabedoria);
-    var [periciaInvestigacao, setPericiaInvestigacao] = useState(() => props.Inteligencia);
-    var [periciaLidarComAnimais, setPericiaLidarComAnimais] = useState(() => props.Sabedoria);
-    var [periciaMedicina, setPericiaMedicina] = useState(() => props.Sabedoria);
-    var [periciaNatureza, setPericiaNatureza] = useState(() => props.Inteligencia);
-    var [periciaPercepcao, setPericiaPercepcao] = useState(() => props.Sabedoria);
-    var [periciaPersuasao, setPericiaPersuasao] = useState(() => props.Carisma);
-    var [periciaPrestidigitacao, setPericiaPrestidigitacao] = useState(() => props.Destreza);
-    var [periciaReligiao, setPericiaReligiao] = useState(() => props.Inteligencia);
-    var [periciaSobrevivencia, setPericiaSobrevivencia] = useState(() => props.Sabedoria);
+    var [periciaAcrobacia, setPericiaAcrobacia] = useState(() => modificadores.Destreza);
+    var [periciaArcanismo, setPericiaArcanismo] = useState(() => modificadores.Inteligencia);
+    var [periciaAtletismo, setPericiaAtletismo] = useState(() => modificadores.Forca);
+    var [periciaAtuacao, setPericiaAtuacao] = useState(() => modificadores.Carisma);
+    var [periciaBlefar, setPericiaBlefar] = useState(() => modificadores.Carisma);
+    var [periciaFurtividade, setPericiaFurtividade] = useState(() => modificadores.Destreza);
+    var [periciaHistoria, setPericiaHistoria] = useState(() => modificadores.Inteligencia);
+    var [periciaIntimidacao, setPericiaIntimidacao] = useState(() => modificadores.Carisma);
+    var [periciaIntuicao, setPericiaIntuicao] = useState(() => modificadores.Sabedoria);
+    var [periciaInvestigacao, setPericiaInvestigacao] = useState(() => modificadores.Inteligencia);
+    var [periciaLidarComAnimais, setPericiaLidarComAnimais] = useState(() => modificadores.Sabedoria);
+    var [periciaMedicina, setPericiaMedicina] = useState(() => modificadores.Sabedoria);
+    var [periciaNatureza, setPericiaNatureza] = useState(() => modificadores.Inteligencia);
+    var [periciaPercepcao, setPericiaPercepcao] = useState(() => modificadores.Sabedoria);
+    var [periciaPersuasao, setPericiaPersuasao] = useState(() => modificadores.Carisma);
+    var [periciaPrestidigitacao, setPericiaPrestidigitacao] = useState(() => modificadores.Destreza);
+    var [periciaReligiao, setPericiaReligiao] = useState(() => modificadores.Inteligencia);
+    var [periciaSobrevivencia, setPericiaSobrevivencia] = useState(() => modificadores.Sabedoria);
 
     var [proficiencia, setProficiencia] = useState(() => 2);
-
-    console.log(props)
-    console.log(resistForca)
 
     function CalcProficiencia() {
         var dom = document.getElementById("proficiencia");
@@ -47,158 +44,159 @@ function Proficiencia({ props }) {
         proficienciaValue = Math.round(proficienciaValue);
         dom.value = proficienciaValue;
         setProficiencia(() => proficienciaValue);
-        console.log("ProficienciaValue: " + proficienciaValue)
-        console.log("Proficiencia: " + proficiencia)
+        handleResult(periciaPercepcao);
     }
 
     function SomaProficiencia(nome) {
         var checkbox = document.getElementById(`checkbox_${nome}`)
         if (checkbox.checked) {
             if (nome == "forca") {
-                setResistForca(() => props.Forca + proficiencia)
+                setResistForca(() => modificadores.Forca + proficiencia)
             }
             if (nome == "destreza") {
-                setResistDestreza(() => props.Destreza + proficiencia)
+                setResistDestreza(() => modificadores.Destreza + proficiencia)
             }
             if (nome == "constituicao") {
-                setResistConstituicao(() => props.Constituicao + proficiencia)
+                setResistConstituicao(() => modificadores.Constituicao + proficiencia)
             }
             if (nome == "inteligencia") {
-                setResistInteligencia(() => props.Inteligencia + proficiencia)
+                setResistInteligencia(() => modificadores.Inteligencia + proficiencia)
             }
             if (nome == "sabedoria") {
-                setResistSabedoria(() => props.Sabedoria + proficiencia)
+                setResistSabedoria(() => modificadores.Sabedoria + proficiencia)
             }
             if (nome == "carisma") {
-                setResistCarisma(() => props.Carisma + proficiencia)
+                setResistCarisma(() => modificadores.Carisma + proficiencia)
             }
             if (nome == "Acrobacia") {
-                setPericiaAcrobacia(() => props.Destreza + proficiencia)
+                setPericiaAcrobacia(() => modificadores.Destreza + proficiencia)
             }
             if (nome == "Arcanismo") {
-                setPericiaArcanismo(() => props.Inteligencia + proficiencia)
+                setPericiaArcanismo(() => modificadores.Inteligencia + proficiencia)
             }
             if (nome == "Atletismo") {
-                setPericiaAtletismo(() => props.Forca + proficiencia)
+                setPericiaAtletismo(() => modificadores.Forca + proficiencia)
             }
             if (nome == "Atuacao") {
-                setPericiaAtuacao(() => props.Carisma + proficiencia)
+                setPericiaAtuacao(() => modificadores.Carisma + proficiencia)
             }
             if (nome == "Blefar") {
-                setPericiaBlefar(() => props.Carisma + proficiencia)
+                setPericiaBlefar(() => modificadores.Carisma + proficiencia)
             }
             if (nome == "Furtividade") {
-                setPericiaFurtividade(() => props.Destreza + proficiencia)
+                setPericiaFurtividade(() => modificadores.Destreza + proficiencia)
             }
             if (nome == "Historia") {
-                setPericiaHistoria(() => props.Inteligencia + proficiencia)
+                setPericiaHistoria(() => modificadores.Inteligencia + proficiencia)
             }
             if (nome == "Intimidacao") {
-                setPericiaIntimidacao(() => props.Carisma + proficiencia)
+                setPericiaIntimidacao(() => modificadores.Carisma + proficiencia)
             }
             if (nome == "Intuicao") {
-                setPericiaIntuicao(() => props.Carisma + proficiencia)
+                setPericiaIntuicao(() => modificadores.Carisma + proficiencia)
             }
             if (nome == "Investigacao") {
-                setPericiaInvestigacao(() => props.Inteligencia + proficiencia)
+                setPericiaInvestigacao(() => modificadores.Inteligencia + proficiencia)
             }
             if (nome == "LidarComAnimais") {
-                setPericiaLidarComAnimais(() => props.Sabedoria + proficiencia)
+                setPericiaLidarComAnimais(() => modificadores.Sabedoria + proficiencia)
             }
             if (nome == "Medicina") {
-                setPericiaMedicina(() => props.Sabedoria + proficiencia)
+                setPericiaMedicina(() => modificadores.Sabedoria + proficiencia)
             }
             if (nome == "Natureza") {
-                setPericiaNatureza(() => props.Inteligencia + proficiencia)
+                setPericiaNatureza(() => modificadores.Inteligencia + proficiencia)
             }
             if (nome == "Percepcao") {
-                setPericiaPercepcao(() => props.Sabedoria + proficiencia)
+                setPericiaPercepcao(() => modificadores.Sabedoria + proficiencia)
+                handleResult(periciaPercepcao);
             }
             if (nome == "Persuasao") {
-                setPericiaPersuasao(() => props.Carisma + proficiencia)
+                setPericiaPersuasao(() => modificadores.Carisma + proficiencia)
             }
             if (nome == "Prestidigitacao") {
-                setPericiaPrestidigitacao(() => props.Prestidigitacao + proficiencia)
+                setPericiaPrestidigitacao(() => modificadores.Prestidigitacao + proficiencia)
             }
             if (nome == "Religiao") {
-                setPericiaReligiao(() => props.Inteligencia + proficiencia)
+                setPericiaReligiao(() => modificadores.Inteligencia + proficiencia)
             }
             if (nome == "Sobrevivencia") {
-                setPericiaSobrevivencia(() => props.Sabedoria + proficiencia)
+                setPericiaSobrevivencia(() => modificadores.Sabedoria + proficiencia)
             }
         }
         if (!checkbox.checked) {
             if (nome == "forca") {
-                setResistForca(() => props.Forca)
+                setResistForca(() => modificadores.Forca)
             }
             if (nome == "destreza") {
-                setResistDestreza(() => props.Destreza)
+                setResistDestreza(() => modificadores.Destreza)
             }
             if (nome == "constituicao") {
-                setResistConstituicao(() => props.Constituicao)
+                setResistConstituicao(() => modificadores.Constituicao)
             }
             if (nome == "inteligencia") {
-                setResistInteligencia(() => props.Inteligencia)
+                setResistInteligencia(() => modificadores.Inteligencia)
             }
             if (nome == "sabedoria") {
-                setResistSabedoria(() => props.Sabedoria)
+                setResistSabedoria(() => modificadores.Sabedoria)
             }
             if (nome == "carisma") {
-                setResistCarisma(() => props.Carisma)
+                setResistCarisma(() => modificadores.Carisma)
             }
             if (nome == "Acrobacia") {
-                setPericiaAcrobacia(() => props.Destreza)
+                setPericiaAcrobacia(() => modificadores.Destreza)
             }
             if (nome == "Arcanismo") {
-                setPericiaArcanismo(() => props.Inteligencia)
+                setPericiaArcanismo(() => modificadores.Inteligencia)
             }
             if (nome == "Atletismo") {
-                setPericiaAtletismo(() => props.Forca)
+                setPericiaAtletismo(() => modificadores.Forca)
             }
             if (nome == "Atuacao") {
-                setPericiaAtuacao(() => props.Carisma)
+                setPericiaAtuacao(() => modificadores.Carisma)
             }
             if (nome == "Blefar") {
-                setPericiaBlefar(() => props.Carisma)
+                setPericiaBlefar(() => modificadores.Carisma)
             }
             if (nome == "Furtividade") {
-                setPericiaFurtividade(() => props.Destreza)
+                setPericiaFurtividade(() => modificadores.Destreza)
             }
             if (nome == "Historia") {
-                setPericiaHistoria(() => props.Inteligencia)
+                setPericiaHistoria(() => modificadores.Inteligencia)
             }
             if (nome == "Intimidacao") {
-                setPericiaIntimidacao(() => props.Carisma)
+                setPericiaIntimidacao(() => modificadores.Carisma)
             }
             if (nome == "Intuicao") {
-                setPericiaIntuicao(() => props.Carisma)
+                setPericiaIntuicao(() => modificadores.Carisma)
             }
             if (nome == "Investigacao") {
-                setPericiaInvestigacao(() => props.Inteligencia)
+                setPericiaInvestigacao(() => modificadores.Inteligencia)
             }
             if (nome == "LidarComAnimais") {
-                setPericiaLidarComAnimais(() => props.Sabedoria)
+                setPericiaLidarComAnimais(() => modificadores.Sabedoria)
             }
             if (nome == "Medicina") {
-                setPericiaMedicina(() => props.Sabedoria)
+                setPericiaMedicina(() => modificadores.Sabedoria)
             }
             if (nome == "Natureza") {
-                setPericiaNatureza(() => props.Inteligencia)
+                setPericiaNatureza(() => modificadores.Inteligencia)
             }
             if (nome == "Percepcao") {
-                setPericiaPercepcao(() => props.Sabedoria)
+                setPericiaPercepcao(() => modificadores.Sabedoria)
+                handleResult(periciaPercepcao);
             }
             if (nome == "Persuasao") {
-                setPericiaPersuasao(() => props.Carisma)
+                setPericiaPersuasao(() => modificadores.Carisma)
             }
             if (nome == "Prestidigitacao") {
-                setPericiaPrestidigitacao(() => props.Destreza)
+                setPericiaPrestidigitacao(() => modificadores.Destreza)
             }
             if (nome == "Religiao") {
-                setPericiaReligiao(() => props.Inteligencia)
+                setPericiaReligiao(() => modificadores.Inteligencia)
             }
             if (nome == "Sobrevivencia") {
-                setPericiaSobrevivencia(() => props.Sabedoria)
+                setPericiaSobrevivencia(() => modificadores.Sabedoria)
             }
         }
     }
@@ -485,7 +483,8 @@ function Proficiencia({ props }) {
                         type="checkbox"
                         name="Percepcao"
                         id="checkbox_Percepcao"
-                        onChange={() => SomaProficiencia("Percepcao")
+                        onClick={() =>
+                            SomaProficiencia("Percepcao")
                         } />
                     <p className={Style.block_Pericia_Value} id="valor_Percepcao"> {periciaPercepcao} </p>
                     <p className={Style.block_Pericia_Text}> Percepção </p>

@@ -1,0 +1,23 @@
+.block_PercepcaoPassiva{
+    background-image: url("../../../public/FundoSabedoriaPassiva.png");
+    padding: 0px;
+    margin: 0px;
+    height: 46px;
+    width: 270px;
+    display: flex;
+}
+
+.block_PercepcaoPassiva_Value{
+    margin: 0px;
+    padding: 0px;
+    font-size: 30px;
+    margin-left: 13px ;
+    margin-top: 7px ;
+}
+
+.block_PercepcaoPassiva_Text{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 15px;
+    margin-left: 30px;
+}

@@ -3,8 +3,7 @@ import { useState } from 'react';
 import Proficiencia from './Proficiencia.js'
 import Style from '../../css/fixa/stylesModAtrib.module.css'
 
-function ModAtrib() {
-    ///// Teste
+function ModAtrib({ percepcao }) {
     var [modForca, setModForca] = useState(() => -5);
     var [modDestreza, setModDestreza] = useState(() => -5);
     var [modConstituicao, setModConstituicao] = useState(() => -5);
@@ -12,13 +11,21 @@ function ModAtrib() {
     var [modSabedoria, setModSabedoria] = useState(() => -5);
     var [modCarisma, setModCarisma] = useState(() => -5);
 
+    var [PercepcaoPassiva, setPercepcaoPassiva] = useState(() => 0);
+
     var modificadores = {
-        Forca : modForca,
-        Destreza : modDestreza,
-        Constituicao : modConstituicao,
-        Inteligencia : modInteligencia,
-        Sabedoria : modSabedoria,
-        Carisma : modCarisma,
+        Forca: modForca,
+        Destreza: modDestreza,
+        Constituicao: modConstituicao,
+        Inteligencia: modInteligencia,
+        Sabedoria: modSabedoria,
+        Carisma: modCarisma,
+    }
+
+    const updatePercepcaoPassiva = r => {
+        setPercepcaoPassiva(() => 10 + r);
+        percepcao(PercepcaoPassiva);
+        console.log("ModAtrib - R: " + r)
     }
 
     function CalculaMod(name) {
@@ -58,6 +65,7 @@ function ModAtrib() {
         }
         if (name == "sabedoria") {
             setModSabedoria(() => Math.round(mod));
+            percepcao(PercepcaoPassiva);
         }
         if (name == "carisma") {
             setModCarisma(() => Math.round(mod));
@@ -77,7 +85,7 @@ function ModAtrib() {
                         name="forca"
                         id="forca"
                         className={Style.block_Input}
-                        onChange={() => CalculaMod("forca")}
+                        onClick={() => CalculaMod("forca")}
                     />
                     <p className={Style.block_Mod} id='mod_forca'> -5 </p>
                 </div>
@@ -90,7 +98,7 @@ function ModAtrib() {
                         placeholder='0'
                         id="destreza"
                         className={Style.block_Input}
-                        onChange={() => CalculaMod("destreza")}
+                        onClick={() => CalculaMod("destreza")}
                     />
                     <p className={Style.block_Mod} id='mod_destreza'> -5 </p>
                 </div>
@@ -103,7 +111,7 @@ function ModAtrib() {
                         placeholder='0'
                         id="constituicao"
                         className={Style.block_Input}
-                        onChange={() => CalculaMod("constituicao")}
+                        onClick={() => CalculaMod("constituicao")}
                     />
                     <p className={Style.block_Mod} id='mod_constituicao'> -5 </p>
                 </div>
@@ -116,7 +124,7 @@ function ModAtrib() {
                         placeholder='0'
                         id="inteligencia"
                         className={Style.block_Input}
-                        onChange={() => CalculaMod("inteligencia")}
+                        onClick={() => CalculaMod("inteligencia")}
                     />
                     <p className={Style.block_Mod} id='mod_inteligencia'> -5 </p>
                 </div>
@@ -129,7 +137,7 @@ function ModAtrib() {
                         placeholder='0'
                         id="sabedoria"
                         className={Style.block_Input}
-                        onChange={() => CalculaMod("sabedoria")}
+                        onClick={() => CalculaMod("sabedoria")}
                     />
                     <p className={Style.block_Mod} id='mod_sabedoria'> -5 </p>
                 </div>
@@ -142,12 +150,12 @@ function ModAtrib() {
                         placeholder='0'
                         id="carisma"
                         className={Style.block_Input}
-                        onChange={() => CalculaMod("carisma")}
+                        onClick={() => CalculaMod("carisma")}
                     />
                     <p className={Style.block_Mod} id='mod_carisma'> -5 </p>
                 </div>
             </div>
-            <Proficiencia props={modificadores}></Proficiencia>
+            <Proficiencia modificadores={modificadores} handleResult={updatePercepcaoPassiva}></Proficiencia>
         </div>
     )
 }
