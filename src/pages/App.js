@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
-import ModAtrib from './components/fixa/ModAtrib.js'
-import PercepcaoPassiva from './components/fixa/PercepcaoPassiva.js'
-import Style from './css/main/styles.module.css'
+import ModAtrib from '../components/fixa/ModAtrib.js'
+import PercepcaoPassiva from '../components/fixa/PercepcaoPassiva.js'
+import Style from '../css/main/styles.module.css'
 
 function App() {
 
