@@ -1,0 +1,74 @@
+.Back {
+    background-image: linear-gradient(to top, #c82429, #a22543);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.All {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    background-image: url("../../images/FundoGrandeCerto.png");
+    width: 1536px;
+    height: 864px;
+    border-radius: 50px;
+    box-shadow: 10px 10px rgb(0, 0, 0);
+}
+
+.Login {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 100px;
+    margin-left: 950px;
+    height: 700px;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.616);
+    border-radius: 50px;
+}
+
+.Logo {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 100px;
+    height: 300px;
+    width: 300px;
+}
+
+.Form {
+    padding: 0px;
+    margin: 0px;
+}
+
+.Btt {
+    margin: 0px;
+    margin-left: 150px;
+    margin-top: 50px;
+    padding: 0px;
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to top, #c82429, #a22543);
+    color: white;
+    border-radius: 20px;
+}
+
+.Btt:Hover {
+    opacity: 0.5;
+    transition: .5s;
+}
+
+.Text {
+    margin: 0px;
+    padding: 0px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 48px;
+    color: #a22543;
+}

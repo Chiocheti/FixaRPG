@@ -7,7 +7,7 @@ body{
     height: 140px;
     width: 782px;
     align-items: center;
-    background-image: url("../../../public/FundoHead.png");
+    background-image: url("../../images/FundoHead.png");
 }
 .flex{
     display: flex;
