@@ -1,3 +1,11 @@
+.Flex{
+    display: flex;
+    margin: 0px;
+    margin-left: 100px;
+    padding: 0px;
+    font-size: large;
+}
+
 .App{
     background-image: linear-gradient(to top, #c82429, #a22543);
 }
@@ -36,9 +44,10 @@
 .Logo {
     padding: 0px;
     margin: 0px;
-    margin-left: 100px;
-    height: 300px;
-    width: 300px;
+    margin-bottom: 10px;
+    margin-left: 125px;
+    height: 250px;
+    width: 250px;
 }
 
 .Form {
@@ -49,7 +58,7 @@
 .Btt {
     margin: 0px;
     margin-left: 150px;
-    margin-top: 50px;
+    margin-top: 20px;
     padding: 0px;
     height: 50px;
     width: 200px;
@@ -58,7 +67,6 @@
     background-image: linear-gradient(to top, #c82429, #a22543);
     color: white;
     border-radius: 20px;
-    text-decoration: none;
 }
 
 .Btt:Hover {
@@ -68,12 +76,20 @@
 
 .Text {
     margin: 0px;
+    margin-top: 30px;
+    margin-left: 100px;
     padding: 0px;
     font-weight: bolder;
     display: flex;
-    justify-content: center;
-    text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 48px;
+    font-size: 28px;
     color: #a22543;
+}
+
+.Input{
+    margin: 0px;
+    margin-left: 100px;
+    margin-top: 0px;
+    height: 30px;
+    width: 300px;
 }

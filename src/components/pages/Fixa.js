@@ -2,9 +2,9 @@ import React from 'react';
 import { useState } from 'react';
 import ModAtrib from '../components/fixa/ModAtrib.js'
 import PercepcaoPassiva from '../components/fixa/PercepcaoPassiva.js'
-import Style from '../css/main/styles.module.css'
 
-function App() {
+import Style from '../css/main/styles.module.css'
+function Main() {
 
   var [valorPercepcaoPassiva, setPercepcaoPassiva] = useState(() => 10);
 
@@ -13,15 +13,17 @@ function App() {
   }
 
   return (
-    <div>
-      <div className={Style.head}>
+    <>
+      <div>
+        <div className={Style.head}>
+        </div>
+        <div className={Style.flex}>
+          <ModAtrib percepcao={ValorPercepcaoPassiva} />
+        </div>
+        <PercepcaoPassiva valor={valorPercepcaoPassiva} />
       </div>
-      <div className={Style.flex}>
-        <ModAtrib percepcao={ValorPercepcaoPassiva} />
-      </div>
-      <PercepcaoPassiva valor={valorPercepcaoPassiva} />
-    </div>
+    </>
   );
 }
 
-export default App;
+export default Main;

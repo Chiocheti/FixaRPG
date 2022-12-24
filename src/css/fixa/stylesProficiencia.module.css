@@ -1,5 +1,5 @@
 .block {
-    background-image: url("../../../public/FundoInspiracao.png");
+    background-image: url("../../images/FundoInspiracao.png");
     height: 104px;
     width: 169px;
 }
@@ -50,7 +50,7 @@
     height: 152px;
     width: 173px;
     padding-top: 5px;
-    background-image: url("../../../public/FundoTestResist.png");
+    background-image: url("../../images/FundoTestResist.png");
 
 }
 
@@ -89,7 +89,7 @@
 .block_Pericia {
     margin: 0px;
     padding-top: 15px;
-    background-image: url("../../../public/FundoPericias.png");
+    background-image: url("../../images/FundoPericias.png");
     height: 385px;
     width: 173px;
 }

@@ -1,5 +1,7 @@
-import Style from "../css/main/stylesMain.module.css"
-import Logo from "../images/LogoRPG.png"
+import Style from "../../css/main/stylesMain.module.css"
+import Logo from "../../images/LogoRPG.png"
+
+import { Link } from 'react-router-dom'
 
 function Main() {
     return (
@@ -9,13 +11,13 @@ function Main() {
                     <p className={Style.Text}> BEM VINDOS <br /> AO  RPG </p>
                     <img src={Logo} alt="Logo" className={Style.Logo} />
                     <div className={Style.Form}>
-                        <div className={Style.Btt}>
+                        <Link className={Style.Btt} to="/Login">
                             <p> LOGAR </p>
-                        </div>
+                        </Link>
                         <br />
-                        <div className={Style.Btt}>
+                        <Link className={Style.Btt} to="/Cadastro">
                             <p> CRIAR CONTA </p>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -23,4 +25,4 @@ function Main() {
     )
 }
 
-export default Main;
+export default Main
