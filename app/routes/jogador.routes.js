@@ -18,6 +18,9 @@ module.exports = app => {
     // Pegando Jogador pelo Nome e Senha
     router.get('/nomeSenha/:nomeJogador/:senhaJogador', jogador.findOneByNomeAndSenha);
 
+    // Pegando Jogador pelo Email
+    router.get('/email/:email/', jogador.findOneByEmail);
+
     // Modificando um Jogador ja existente
     router.put('/:idJogador', jogador.update);
 

@@ -9,7 +9,9 @@ exports.create = (req, res) => {
     }
     const jogador = new Jogador({
         nomeJogador: req.body.nomeJogador,
-        senhaJogador: req.body.senhaJogador
+        senhaJogador: req.body.senhaJogador,
+        email: req.body.email,
+        telefone: req.body.telefone
     });
 
     Jogador.create(jogador, (err, data) => {
@@ -48,6 +50,26 @@ exports.findOneByID = (req, res) => {
             else {
                 res.status(500).send({
                     message: `Erro ao achar Jogador com Id: ${req.params.idJogador}`
+                });
+            }
+        }
+        else {
+            res.send(data)
+        }
+    })
+}
+// Pegando Jogador pelo EMAIL
+exports.findOneByEmail = (req, res) => {
+    Jogador.findByEmail(req.params.email, (err, data) => {
+        if (err) {
+            if (err.kind === "not_found") {
+                res.status(404).send({
+                    message: `Nenhum jogador com Email: ${req.params.email} encontrado`
+                });
+            }
+            else {
+                res.status(500).send({
+                    message: `Erro ao achar Jogador com Email: ${req.params.email}`
                 });
             }
         }

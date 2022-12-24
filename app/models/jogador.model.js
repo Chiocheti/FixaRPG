@@ -5,6 +5,8 @@ const Jogador = function (jogador) {
     this.idJogador = jogador.idJogador;
     this.nomeJogador = jogador.nomeJogador;
     this.senhaJogador = jogador.senhaJogador;
+    this.email = jogador.email;
+    this.telefone = jogador.telefone;
 };
 // Criar um novo jogador
 Jogador.create = (newJogador, result) => {
@@ -14,8 +16,8 @@ Jogador.create = (newJogador, result) => {
             result(err, null);
             return;
         }
-        console.log("Jogador criado com sucesso: ", { id: res.insertId, ...newJogador });
-        result(null, { id: res.insertId, ...newJogador })
+        console.log("Jogador criado com sucesso: ", { idJogador: res.insertId, ...newJogador });
+        result(null, { idJogador: res.insertId, ...newJogador })
     })
 };
 // GET todos os Jogadores
@@ -83,9 +85,25 @@ Jogador.findByNomeAndSenha = (nomeJogador, senhaJogador, result) => {
         result({ kind: "not_found" }, null)
     })
 }
+// GET jogador pelo EMAIL
+Jogador.findByEmail = (email, result) => {
+    sql.query(`SELECT * FROM jogador WHERE  email = '${email}'`, (err, res) => {
+        if (err) {
+            console.log("Houve um erro: ", err);
+            result(err, null);
+            return;
+        }
+        if (res.length) {
+            console.log("Jogador encontrado: ", res[0]);
+            result(null, res[0]);
+            return;
+        }
+        result({ kind: "not_found" }, null)
+    })
+}
 // UPDATE jogador pelo ID
 Jogador.updateById = (idJogador, jogador, result) => {
-    sql.query("UPDATE jogador SET nomeJogador = ? , senhaJogador = ? WHERE idJogador = ?", [jogador.nomeJogador, jogador.senhaJogador, idJogador], (err, res) => {
+    sql.query("UPDATE jogador SET nomeJogador = ? , senhaJogador = ? , email = ? , telefone = ? WHERE idJogador = ?", [jogador.nomeJogador, jogador.senhaJogador, jogador.email, jogador.telefone, idJogador], (err, res) => {
         if (err) {
             console.log("Houve um erro: ", err);
             result(null, err);
