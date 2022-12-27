@@ -32,7 +32,6 @@ function ModAtrib({ percepcao }) {
     const updatePercepcaoPassiva = r => {
         setPercepcaoPassiva(() => 10 + r);
         percepcao(PercepcaoPassiva);
-        console.log("ModAtrib - R: " + r)
     }
 
     function CalculaMod(name) {

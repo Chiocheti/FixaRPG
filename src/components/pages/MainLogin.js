@@ -1,11 +1,18 @@
 import { FcLock, FcReading } from "react-icons/fc";
 
+import { useNavigate } from 'react-router-dom'
 import React from "react";
 import Style from "../../css/main/stylesMainLogin.module.css"
 import Logo from "../../images/LogoRPG.png"
 import Axios from 'axios';
 
 function MainLogin() {
+
+    const navigate = useNavigate();
+
+    function handleClick() {
+        navigate("/logued/UserPage")
+    }
 
     function Logar() {
         var nome = document.getElementById("inputNome").value.trim();
@@ -17,15 +24,12 @@ function MainLogin() {
         };
         Axios.request(options).then(function (response) {
             console.log("Achou")
-            if(checkBox.checked){
-                var jogador = {
-                    nome: nome,
-                    senha: senha
-                }
-                localStorage.setItem("jogador" , JSON.stringify(jogador))
+            if (checkBox.checked) {
+                localStorage.setItem("jogador", JSON.stringify(response.data))
             }
-        }).catch(function(error){
-            console.log("N Achou")
+            sessionStorage.setItem("jogador", JSON.stringify(response.data))
+            handleClick()
+        }).catch(function (error) {
             return 0;
         });
     }
