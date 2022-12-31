@@ -1,0 +1,13 @@
+.All{
+    padding: 0px;
+    margin: 0px;
+    background-image: url("../../images/FundoHpAndArmour.png");
+    width: 266px;
+    height: 352px;
+}
+
+.ClassArmour{
+    background-image: url("../../images/FundoClasseArmour.png");
+    width: 77px;
+    height: 81px;
+}
