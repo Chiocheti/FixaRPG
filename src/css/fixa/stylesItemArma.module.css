@@ -1,0 +1,94 @@
+.All{
+    margin-bottom: 5px;
+    background-color: #dfe0e0;
+    margin-left: 10px;
+}
+
+.InputNome{
+    margin: 0px;
+    margin-top: 3px;
+    padding: 0px;
+    width: 85px;
+    height: 15px;
+    text-align: center;
+    font-size: 12px;
+}
+.InputBonus{
+    margin: 0px;
+    padding: 0px;
+    margin-left: 5px;
+    width: 20px;
+    height: 15px;
+    text-align: center;
+    font-size: 12px;
+}
+.InputDano{
+    margin: 0px;
+    padding: 0px;
+    margin-left: 5px;
+    width: 30px;
+    height: 15px;
+    text-align: center;
+    font-size: 12px;
+}
+.InputTipo{
+    margin: 0px;
+    padding: 0px;
+    margin-left: 5px;
+    width: 60px;
+    height: 19px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.InputDescricao{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 2px;
+    width: 220px;
+    text-align: center;
+}
+
+.BttUpdate{
+    margin-top: 3px;
+    margin-left: 135px;
+    transition: all 2s;
+}
+
+.BttUpdate:hover{
+    transform: rotateZ(360deg);
+    -webkit-transform: scale(1.5); 
+}
+
+.BttUpdate:active{
+    opacity: 50%;
+}
+
+.BttDelete{
+    margin-top: 3px;
+    margin-left: 5px;
+    transition: all 2s;
+}
+
+.BttDelete:hover{
+    transform: rotateZ(360deg);
+    -webkit-transform: scale(1.5); 
+}
+
+.BttDelete:active{
+    opacity: 50%;
+}
+
+.BttLock{
+    margin-top: 3px;
+    transition: all 2s;
+}
+
+.BttLock:hover{
+    transform: rotateZ(360deg);
+    -webkit-transform: scale(1.5); 
+}
+
+.BttLock:active{
+    opacity: 50%;
+}

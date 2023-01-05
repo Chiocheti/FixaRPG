@@ -17,6 +17,7 @@ app.get("/", (req, res) => {
 });
 
 require("./app/routes/jogador.routes.js")(app);
+require("./app/routes/pj.routes.js")(app);
 
 const PORT = 3001;
 app.listen(PORT, () => {

@@ -10,9 +10,11 @@ import Login from "./components/pages/MainLogin"
 import UserPage from "./components/pages/UserPage"
 import Fixa from "./components/pages/Fixa"
 
+import Style from "./css/main/stylesApp.module.css"
+
 function App() {
   return (
-    <div>
+    <div className={Style.All}>
       <Router>
         <Routes>
           <Route path="/" element={<NavbarlogOff/>}/>

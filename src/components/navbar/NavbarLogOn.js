@@ -1,10 +1,10 @@
 import Logo from '../../images/LogoRPG.png'
 import { Link } from 'react-router-dom'
-import Style from '../../css/navbar/stylesNavbarLogOff.module.css'
+import Style from '../../css/navbar/stylesNavbarLogOn.module.css'
 
 function NavbarlogOn() {
     return (
-        <div className={Style.All}>
+        <div className={Style.All}> 
             <img src={Logo} alt="Logo" className={Style.Logo} />
             <p className={Style.Frase}>
                 SEU RPG COMEÇA AQUI

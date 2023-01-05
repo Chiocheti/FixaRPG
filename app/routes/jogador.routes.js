@@ -27,7 +27,7 @@ module.exports = app => {
     // Deletar um jogador pelo seu ID
     router.delete('/:idJogador', jogador.deleteFromId);
 
-    // Deletar um jogador pelo seu ID
+    // Deletar todos os Jogadores
     router.delete('/', jogador.deleteAll);
 
     app.use('/api/jogador', router);

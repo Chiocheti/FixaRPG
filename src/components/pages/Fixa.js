@@ -4,6 +4,7 @@ import ModAtrib from '../fixa/ModAtrib.js'
 import PercepcaoPassiva from '../fixa/PercepcaoPassiva.js'
 import Head from '../fixa/Head.js'
 import HpAndArmour from '../fixa/HpAndArmour.js';
+import Armas from '../fixa/Armas.js'
 
 import Style from '../../css/fixa/styles.module.css'
 function Main() {
@@ -15,18 +16,19 @@ function Main() {
   }
 
   return (
-    <>
-      <div>
-        <div className={Style.head}>
-          <Head />
-        </div>
-        <div className={Style.flex}>
-          <ModAtrib percepcao={ValorPercepcaoPassiva} />
-          <HpAndArmour />
-        </div>
-        <PercepcaoPassiva valor={valorPercepcaoPassiva} />
+    <div>
+      <div className={Style.head}>
+        <Head />
       </div>
-    </>
+      <div className={Style.flex}>
+        <ModAtrib percepcao={ValorPercepcaoPassiva} />
+        <div>
+          <HpAndArmour />
+          <Armas />
+        </div>
+      </div>
+      <PercepcaoPassiva valor={valorPercepcaoPassiva} />
+    </div>
   );
 }
 

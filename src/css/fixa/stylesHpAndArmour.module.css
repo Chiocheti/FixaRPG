@@ -1,4 +1,4 @@
-.All{
+.All {
     padding: 0px;
     margin: 0px;
     background-image: url("../../images/FundoHpAndArmour.png");
@@ -6,8 +6,244 @@
     height: 352px;
 }
 
-.ClassArmour{
+.Flex {
+    display: flex;
+}
+
+.ClassArmour {
+    padding: 0px;
+    margin: 0px;
     background-image: url("../../images/FundoClasseArmour.png");
     width: 77px;
     height: 81px;
+    margin-left: 6px;
+    margin-top: 10px;
+}
+
+.InputClassArmour {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 15px;
+    margin-left: 17px;
+    width: 40px;
+    height: 40px;
+    font-size: 36px;
+    text-align: center;
+}
+
+.TextClassArmour {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 27px;
+    font-size: 12px;
+}
+
+.Iniciativa {
+    background-image: url("../../images/FundoIniciativa.png");
+    width: 77px;
+    height: 81px;
+    margin-left: 6px;
+    margin-top: 10px;
+    ;
+}
+
+.InputIniciativa {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 15px;
+    margin-left: 17px;
+    width: 40px;
+    height: 40px;
+    font-size: 36px;
+    text-align: center;
+}
+
+.TextIniciativa {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 10px;
+    font-size: 11px;
+}
+
+.Deslocamento {
+    background-image: url("../../images/FundoIniciativa.png");
+    width: 77px;
+    height: 81px;
+    margin-left: 6px;
+    margin-top: 10px;
+}
+
+
+.InputDeslocamento {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 15px;
+    margin-left: 17px;
+    width: 40px;
+    height: 40px;
+    font-size: 36px;
+    text-align: center;
+}
+
+.TextDeslocamento {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 18px;
+    font-size: 11px;
+}
+
+.PV {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 10px;
+
+    background-image: url("../../images/FundoHp.png");
+    width: 235px;
+    height: 90px;
+}
+
+.TextPVTotal {
+    padding: 0px;
+    margin: 0px;
+    font-size: 10px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.InputPVTotal {
+    padding: 0px;
+    margin: 0px;
+    width: 120px;
+    height: 10px;
+    margin-left: 15px;
+    margin-top: 8px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.InputPVAtual {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-left: 50px;
+    height: 35px;
+    width: 135px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.TextPVAtual {
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.InputPVTemporario {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 10px;
+    margin-left: 50px;
+    height: 35px;
+    width: 135px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.TextPVTemporario {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.Dados {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 10px;
+    background-image: url("../../images/FundoDados.png");
+    width: 114px;
+    height: 74px;
+}
+
+.TesteMorte {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 7px;
+    background-image: url("../../images/FundoDados.png");
+    width: 114px;
+    height: 74px;
+}
+
+.TextTotalDados {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 10px;
+}
+
+.InputTotalDados {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 8px;
+    margin-left: 10px;
+    height: 10px;
+    width: 60px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.TextDadoDeVida {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 2px;
+    margin-left: 20px;
+    font-size: 10px;
+    
+}
+
+.InputDadoDeVida {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 17px;
+    margin-top: 5px;
+    height: 20px;
+    width: 80px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.TextSucesso{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 8px;
+}
+
+.TextFracasso{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 4px;
+    font-size: 8px;
+}
+
+.CheckboxDeath{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 8px;
+    margin-right: 5px;
+}
+
+.TextTesteMorte{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+    font-size: 10px;
+    text-align: center;
 }

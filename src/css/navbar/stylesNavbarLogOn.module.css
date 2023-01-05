@@ -1,0 +1,46 @@
+.All{
+    display: flex;
+    margin: 0px;
+    padding: 10px;
+    background-image: linear-gradient(to top, #a22543 , #c82429);
+    align-items: center;
+    height: 80px;
+}
+
+.Logo{
+    margin: 0px;
+    padding: 0px;
+    height: 80px;
+    width: 80px;
+    margin-left: 50px;
+    transition: all 5s;
+}
+
+.Logo:hover{
+    transform: rotateZ(360deg);
+    -webkit-transform: scale(1.5) rotateZ(360deg); 
+}
+
+.Button{
+    margin-left: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    text-align: center;
+    transition: all 5s;
+}
+.Button:hover{
+    -webkit-transform: scale(1.5);
+}
+
+.Frase{
+    color: white;
+    margin-left: 300px;
+    margin-right: 600px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;   
+}
+

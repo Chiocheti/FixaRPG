@@ -1,0 +1,133 @@
+.All {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 10px;
+    width: 258px;
+    height: 290px;
+    background-image: url("../../images/FundoAtaquesEMagias.png");
+    overflow: hidden;
+}
+
+.Overflow{
+    margin: 0px;
+    padding: 0px;
+    width: 250px;
+    height: 280px;
+    overflow-y: scroll;
+}
+
+.Flex {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.BttClear{
+    margin-top: 3px;
+    margin-left: 5px;
+    transition: all 2s;
+}
+
+.BttClear:hover{
+    transform: rotateZ(360deg);
+    -webkit-transform: scale(1.5); 
+}
+
+.BttClear:active{
+    opacity: 50%;
+}
+
+.BttAdd{
+    margin-top: 3px;
+    margin-left: 170px;
+    transition: all 1s;
+}
+
+.BttAdd:hover{
+    transform: rotateZ(360deg);
+    -webkit-transform: scale(1.5);
+}
+
+.BttAdd:active{
+    opacity: 50%;
+}
+
+.TextNome {
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    margin-left: 20px;
+    height: 10px;
+}
+
+.TextBonus {
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    margin-left: 65px;
+    height: 10px;
+}
+
+.TextDano {
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    margin-left: 5px;
+    height: 10px;
+}
+
+.TextTipo {
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    margin-left: 20px;
+    height: 10px;
+}
+
+.InputNome {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 10px;
+    width: 85px;
+    height: 15px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.InputBonus {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 5px;
+    width: 20px;
+    height: 15px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.InputDano {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 5px;
+    width: 30px;
+    height: 15px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.InputTipo {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 5px;
+    width: 60px;
+    height: 19px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.InputDescricao {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 10px;
+    margin-top: 2px;
+    width: 220px;
+    text-align: center;
+}
